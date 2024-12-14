@@ -16,103 +16,140 @@
   >
 </head>
 
-<body>
-  <header>
-    <figure class="aaa">
+<body class="page">
+  <header class="header">
+    <figure class="header__illustration">
       <img 
         src="./eisenhower-matrix.jpg"
+        class="header__illustration-img"
         alt="Eisenhower matrix illustration showing task prioritization"
       >
-      <figcaption>
+      <figcaption class="header__illustration-text">
         <a 
-          class="more_inf" 
+          class="header__illustration-link" 
           href="https://goal-life.com/page/method/matrix-eisenhower"
         >
-        Want more details?
+          Want more details?
         </a>
       </figcaption>
     </figure>
   </header>
 
   <main>
-    <section class="centered-main-page-element">
-      <form id="topSectionForAddingElementToList">
-        <fieldset>
-          <legend>Add Item</legend>
-          <div class="task-row-wrapper">
-            <input 
-              id="new-task"
-              class="task" 
-              type="text"
-            >
-            <button type="submit">Add</button>
-          </div>
-        </fieldset>
-      </form>
-
-      <article>
-        <h2>Todo</h2>
-        <ul id="incompleteTasks">
-          <li>
-            <input type="checkbox" id="task-1">
-            <label for="task-1" class="task">Pay Bills</label>
-            <input type="text" class="task" placeholder="Edit task">
-            <button 
-              type="button" 
-              class="edit" 
-              aria-label="Edit task"
-            >
-              Edit
-            </button>
-            <button type="button" class="delete">
-              <img 
-                src="./remove.svg" 
-                alt="Remove task"
+    <section>
+      <div class="container">
+        <form class="task-form" id="task-form">
+          <fieldset class="task-form__fieldset">
+            <legend class="task-form__legend">Add Item</legend>
+            <div class="task-form__row">
+              <input 
+                type="text"
+                id="new-task-input"
+                class="task-form__input" 
               >
-            </button>
-          </li>
-          <li class="editMode">
-            <input type="checkbox" id="task-2">
-            <label for="task-2" class="task">Go Shopping</label>
-            <input 
-              type="text" 
-              value="Go Shopping" 
-              class="task"
-            >
-            <button 
-              type="button" 
-              class="edit" 
-              aria-label="Save task"
+              <button 
+                type="button" 
+                class="button task-form__button"
               >
-                Save
-            </button>
-            <button type="button" class="delete">
-              <img 
-                src="./remove.svg" 
-                alt="Remove task"
+                Add
+              </button>
+            </div>
+          </fieldset>
+        </form>
+  
+        <article class="tasks tasks_incomplete">
+          <h2 class="tasks__title">Todo</h2>
+          <ul class="task-list task-list_incomplete">
+            <li class="task-list__item">
+              <input 
+                type="checkbox" 
+                id="task-1" 
+                class="task-list__checkbox"
               >
-            </button>
-          </li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Completed</h2>
-        <ul id="completed-tasks">
-          <li>
-            <input type="checkbox" checked id="task-3">
-            <label for="task-3" class="task">See the Doctor</label>
-            <input type="text" class="task" placeholder="Edit task">
-            <button type="button" class="edit">Edit</button>
-            <button type="button" class="delete">
-              <img 
-                src="./remove.svg" 
-                alt="Remove task"
+              <label for="task-1" class="task-list__label">Pay Bills</label>
+              <input type="text" class="task-list__input">
+              <button 
+                type="button" 
+                class="button task-list__button task-list__button_edit" 
+                aria-label="Edit task"
               >
-            </button>
-          </li>
-        </ul>
-      </article>
+                Edit
+              </button>
+              <button 
+                type="button"
+                class="button task-list__button task-list__button_delete"
+                >
+                  <img 
+                    src="./remove.svg" 
+                    alt="Remove task"
+                    class="button__icon"
+                  >
+              </button>
+            </li>
+            <li class="task-list__item task-list__item_edit-mode">
+              <input 
+                type="checkbox" 
+                id="task-2"
+                class="task-list__checkbox"
+              >
+              <label for="task-2" class="task task-list__label">Go Shopping</label>
+              <input 
+                type="text" 
+                value="Go Shopping" 
+                class="task-list__input"
+              >
+              <button 
+                type="button" 
+                class="button task-list__button task-list__button_edit" 
+                aria-label="Save task"
+                >
+                  Save
+              </button>
+              <button 
+                type="button" 
+                class="button task-list__button task-list__button_delete"
+                >
+                  <img 
+                    src="./remove.svg" 
+                    alt="Remove task"
+                    class="button__icon"
+                  >
+              </button>
+            </li>
+          </ul>
+        </article>
+  
+        <article class="tasks tasks_incomplete">
+          <h2 class="tasks__title">Completed</h2>
+          <ul class="task-list task-list_completed">
+            <li class="task-list__item">
+              <input 
+                type="checkbox" 
+                checked id="task-3" 
+                class="task-list__checkbox"
+              >
+              <label for="task-3" class="task-list__label">See the Doctor</label>
+              <input type="text" class="task-list__input">
+              <button 
+                type="button" 
+                class="button task-list__button task-list__button_edit"
+              >
+                Edit
+              </button>
+              <button 
+                type="button" 
+                class="button task-list__button task-list__button_delete"
+              >
+                <img 
+                  src="./remove.svg" 
+                  alt="Remove task"
+                  class="button__icon"
+                >
+              </button>
+            </li>
+          </ul>
+        </article>
+      </div>
     </section>
   </main>
   <script src="app.js"></script>
