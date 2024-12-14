@@ -48,7 +48,7 @@ ul {
 }
 
 li, 
-h3 {
+h2 {
   list-style: none;
 }
 
@@ -71,9 +71,14 @@ button:hover {
   color: #3a3A3a;
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+}
+
 /* Heading */
-h3,
-label[for="new-task"] {
+h2,
+#topSectionForAddingElementToList legend {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -81,6 +86,7 @@ label[for="new-task"] {
   padding: 30px 0 10px;
   margin: 0;
   text-transform: uppercase;
+  width: 100%;
 }
 
 input[type="text"] {
@@ -101,7 +107,7 @@ input[type="text"]:focus {
 }
 
 /* New Task */
-label[for="new-task"] {
+#topSectionForAddingElementToList legend {
   display: block;
   margin: 0 0 20px;
 }
